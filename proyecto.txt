@@ -1,0 +1,15 @@
+#Partes del proyecto
+
+    #Estructura de datos
+
+    #Estructura de código
+        #Actividades
+            #Formulario?
+                #controles
+        #Adapters
+        #Lógica de negocio(describir las funcionalidades del codigo)
+
+        #...
+
+
+    #Descripción del proyeto
