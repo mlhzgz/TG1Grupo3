@@ -1,15 +1,68 @@
 #Partes del proyecto
 
+    Jefe de Equipo: Victor Viñerta
+
     #Estructura de datos
+        Cita
 
     #Estructura de código
         #Actividades
-            #Formulario?
-                #controles
-        #Adapters
-        #Lógica de negocio(describir las funcionalidades del codigo)
+            Splash
 
-        #...
+            Login
+            #Formulario?
+                Usuario -> EditText
+                Contraseña -> EditText
+                #controles
+                    Btn Entrar
+
+            ListaCitasDia
+                #Menu btn cambiar dia
+                #Menu btn registrar cita
+                #RecyclerView
+
+            RegistrarCita
+                #Formulario
+                    Fecha
+                    Hora
+                    Nombre paciente -> EditText
+                    Especialidad medica (10) -> Spinner
+                    Medico (10) -> Spinner
+                    Anotaciones (Opcional) -> MultilineText
+                    #controles
+                          Btn Registrar
+                          Btn Cancelar
+
+        #Adapters
+            CitaAdapter
+
+        #Lógica de negocio(describir las funcionalidades del codigo)
+            ListaCitas
+                filtrarDias
+
+            ValidarFormulario
+
+            ValidarLogin
 
 
     #Descripción del proyeto
+
+        App que permita gestionar la agenda de citas de una clínica.
+        Debe poder registrarse en la app con su usuario y contraseña, y después de hacerlo,
+        verá el listado de citas del día. Deberá poderse cambiar de día por medio de un calendario,
+        y aparecerán las citas de ese día en el listado. Deberá poderse añadir nuevas entradas en cualquier momento.
+
+        Al pulsar en un elemento del listado, deberá poder verse el formulario de datos de la cita
+        (que deberá ser el mismo que al añadir una nueva cita), con los siguientes datos:
+        fecha y hora de la cita, nombre del paciente, especialidad médica (de un total de 10),
+        médico que lo atenderá (de un total de 10), y un texto descripitivo para posibles anotaciones necesarias.
+        Estos datos deberán guardarse para poder volver a ver cualquiera de las citas cuando se seleccionen en el listado.
+
+        El proyecto constara 1 Splash y 3 Actividades. El Splash saldra al incio de la aplicación con el logo de la consulta medica y un mensaje
+        de bienvenida.
+            La primera actividad sera una ventana de Login con dos campos en los que se debera insertar un usuario y contraseña y se comprobara que sean
+         correctos los datos introducidos.
+            La segunda actividad sera una ventana en la que en la la actionbar nos aparece un icono de un calendario y al pulsarlo aparecera un
+         calendario para poder elegir un dia, al elegirlo nos cargara las citas que hay registradas para ese dia. Ademas en la misma barra
+         saldra un icono para registrar una nueva cita medica, al pulsarlo nos lanzara la actividad de registrar cita.
+         Por defecto nos aparecera listadas las citas del dia actual.
