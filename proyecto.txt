@@ -3,25 +3,25 @@
     Jefe de Equipo: Victor Viñerta
 
     #Estructura de datos
-        Cita
+        Cita -> Ismael 0
 
     #Estructura de código
         #Actividades
-            Splash
+            Splash -> Ismael 0
 
-            Login
+            Login -> Ismael 0
             #Formulario?
                 Usuario -> EditText
                 Contraseña -> EditText
                 #controles
                     Btn Entrar
 
-            ListaCitasDia
+            ListaCitasDia -> Victor 0
                 #Menu btn cambiar dia
                 #Menu btn registrar cita
                 #RecyclerView
 
-            RegistrarCita
+            RegistrarCita -> Álvaro 0
                 #Formulario
                     Fecha
                     Hora
@@ -33,10 +33,10 @@
                           Btn Registrar
                           Btn Cancelar
 
-        #Adapters
+        #Adapters -> Raúl 0
             CitaAdapter
 
-        #Lógica de negocio(describir las funcionalidades del codigo)
+        #Lógica de negocio(describir las funcionalidades del codigo) - Raúl
             ListaCitas
                 filtrarDias
 
