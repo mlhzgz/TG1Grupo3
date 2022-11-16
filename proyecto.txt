@@ -60,9 +60,16 @@
 
         El proyecto constara 1 Splash y 3 Actividades. El Splash saldra al incio de la aplicación con el logo de la consulta medica y un mensaje
         de bienvenida.
-            La primera actividad sera una ventana de Login con dos campos en los que se debera insertar un usuario y contraseña y se comprobara que sean
+
+            La primera actividad será una ventana de Login con dos campos en los que se debera insertar un usuario y contraseña y se comprobara que sean
          correctos los datos introducidos.
-            La segunda actividad sera una ventana en la que en la la actionbar nos aparece un icono de un calendario y al pulsarlo aparecera un
+
+            La segunda actividad será una ventana en la que en la actionbar nos aparece un icono de un calendario y al pulsarlo aparecera un
          calendario para poder elegir un dia, al elegirlo nos cargara las citas que hay registradas para ese dia. Ademas en la misma barra
          saldra un icono para registrar una nueva cita medica, al pulsarlo nos lanzara la actividad de registrar cita.
          Por defecto nos aparecera listadas las citas del dia actual.
+
+            La tercera actividad será una ventana en la que aparecerá un formulario en el que se deberá de elegir una fecha para la cita, la hora de la
+         cita, el nombre del paciente, la especilidad en la que quiere la cita, el médico que le atenderá y unas anotaciones opcionales. Ademas habrá
+         dos botones una para registrar la cita, en el que al pulsarlo se comprobaran que todos los campos obligatorios estén rellenados de manera
+         correcta y un boton para cancelar que nos devolverá a la actividad anterior.
