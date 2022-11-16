@@ -34,6 +34,7 @@ public class ListaCitasActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
     public void abrirListaCitas(){
         Intent intento = new Intent(ListaCitasActivity.this,RegistrarCitaActivity.class);
         startActivity(intento);

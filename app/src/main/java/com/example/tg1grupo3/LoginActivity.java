@@ -11,7 +11,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText nombre;
     private EditText contrasena;
-    private Button entrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
 
         nombre = findViewById(R.id.nombre);
         contrasena = findViewById(R.id.contrasena);
-        entrar = findViewById(R.id.btnentrar);
+        Button entrar = findViewById(R.id.btnentrar);
 
         nombre.setHint("Usuario");
         contrasena.setHint("Contraseña");
