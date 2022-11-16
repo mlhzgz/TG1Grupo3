@@ -1,6 +1,7 @@
 <resources>
     <string name="app_login">Login</string>
-    <string name="app_name">TG1Grupo3</string>
+    <string name="app_citado">Citado De citas</string>
+    <string name="app_Registro">Registro De citas</string>
 
     <string-array name="especialidades">
         <item>Urólogo</item>
