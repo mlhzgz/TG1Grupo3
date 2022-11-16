@@ -2,6 +2,8 @@ package com.example.tg1grupo3;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,12 +14,26 @@ import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ListaCitasActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_citas);
+
+        RecyclerView recycler = findViewById(R.id.recycler);
+        recycler.setHasFixedSize(true);
+
+        RecyclerView.LayoutManager layoutManager2 = new GridLayoutManager(this,2);
+
+        recycler.setLayoutManager(layoutManager2);
+
+
+
+        //recycler.setAdapter(new SerieAdapter(series));
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -34,7 +50,6 @@ public class ListaCitasActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
     public void abrirListaCitas(){
         Intent intento = new Intent(ListaCitasActivity.this,RegistrarCitaActivity.class);
         startActivity(intento);
