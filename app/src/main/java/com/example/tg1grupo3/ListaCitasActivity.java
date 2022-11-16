@@ -1,21 +1,24 @@
 package com.example.tg1grupo3;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.HorizontalScrollView;
-import android.widget.Toast;
 
-import java.util.ArrayList;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.tg1grupo3.adapters.CitaAdapter;
+import com.example.tg1grupo3.datos.Cita;
+import com.example.tg1grupo3.logica.ListaCitas;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class ListaCitasActivity extends AppCompatActivity {
 
@@ -31,9 +34,11 @@ public class ListaCitasActivity extends AppCompatActivity {
 
         recycler.setLayoutManager(layoutManager2);
 
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
+        String fecha = format.format(Calendar.getInstance().getTime());
+        List<Cita> citas = ListaCitas.filtrarPorFecha(fecha);
 
-
-        //recycler.setAdapter(new SerieAdapter(series));
+        recycler.setAdapter(new CitaAdapter(citas));
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -45,7 +50,7 @@ public class ListaCitasActivity extends AppCompatActivity {
         if(item.getItemId()==R.id.nuevaCita){
             abrirListaCitas();
         }else if(item.getItemId()==R.id.calendario){
-            //aqui se debe de abrir el calendario
+            //TODO: abrir el calendario
         }
 
         return super.onOptionsItemSelected(item);
