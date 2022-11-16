@@ -1,4 +1,30 @@
 <resources>
-    <string name="app_name">Citas Medicas</string>
     <string name="app_login">Login</string>
+    <string name="app_name">TG1Grupo3</string>
+
+    <string-array name="especialidades">
+        <item>Urólogo</item>
+        <item>Pediatra</item>
+        <item>Psiquiatría</item>
+        <item>Oftalmólogo</item>
+        <item>Ginecólogo</item>
+        <item>Podólogo</item>
+        <item>otorrinolaringologo</item>
+        <item>Radiólogo</item>
+        <item>Neurólogo</item>
+        <item>Endocrino</item>
+</string-array>
+
+<string-array name="medicos">
+    <item>Dr. Vilches</item>
+    <item>Dr. Shawn Murphy</item>
+    <item>Dr. Derek shepherd</item>
+    <item>Dr. Max Goodwin</item>
+    <item>Dra. Meredith Grey</item>
+    <item>Dra. Eggman</item>
+    <item>Dra. Sara Tancredi</item>
+    <item>Dr. Julius Hibbert</item>
+    <item>Dr. Nick Riviera</item>
+    <item>Dr. Gregory House</item>
+</string-array>
 </resources>
