@@ -4,6 +4,7 @@
     <string name="app_Registro">Registro De citas</string>
 
     <string-array name="especialidades">
+        <item>Seleccione especialidad</item>
         <item>Urólogo</item>
         <item>Pediatra</item>
         <item>Psiquiatría</item>
@@ -17,6 +18,7 @@
 </string-array>
 
 <string-array name="medicos">
+    <item>Seleccione médico</item>
     <item>Dr. Vilches</item>
     <item>Dr. Shawn Murphy</item>
     <item>Dr. Derek shepherd</item>
