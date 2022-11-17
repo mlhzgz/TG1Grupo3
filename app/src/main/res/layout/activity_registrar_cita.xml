@@ -70,24 +70,27 @@
     <EditText
         android:id="@+id/txtAnotacionesCita"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:maxHeight="200dp" />
+
+    <Button
+        android:id="@+id/btnRegistrarCita"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Registrar"
+        android:textAlignment="center" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="211dp" />
+        android:layout_height="10dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCancelarCita"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_height="70dp"
+        android:text="Cancelar"
+        android:textAlignment="center" />
 </LinearLayout>
