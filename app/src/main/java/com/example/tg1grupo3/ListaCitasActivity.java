@@ -1,12 +1,19 @@
 package com.example.tg1grupo3;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.tg1grupo3.adapters.CitaAdapter;
 import com.example.tg1grupo3.datos.Cita;
 import com.example.tg1grupo3.logica.ListaCitas;
+import com.example.tg1grupo3.util.Utilidades;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -21,7 +29,8 @@ import java.util.List;
 import java.util.Locale;
 
 public class ListaCitasActivity extends AppCompatActivity {
-
+ static String fecha;
+ TextView txtFechaElegida;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +59,9 @@ public class ListaCitasActivity extends AppCompatActivity {
         if(item.getItemId()==R.id.nuevaCita){
             abrirListaCitas();
         }else if(item.getItemId()==R.id.calendario){
-            //TODO: abrir el calendario
+            fecha=Utilidades.seleccionarFecha(this);
+            txtFechaElegida= findViewById(R.id.txtFechaElegida);
+            txtFechaElegida.setText(fecha);
         }
 
         return super.onOptionsItemSelected(item);
@@ -59,5 +70,6 @@ public class ListaCitasActivity extends AppCompatActivity {
         Intent intento = new Intent(ListaCitasActivity.this,RegistrarCitaActivity.class);
         startActivity(intento);
     }
+
 
 }
