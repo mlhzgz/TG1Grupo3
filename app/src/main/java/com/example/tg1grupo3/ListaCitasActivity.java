@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tg1grupo3.adapters.CitaAdapter;
@@ -34,9 +35,9 @@ public class ListaCitasActivity extends AppCompatActivity {
         recycler = findViewById(R.id.recycler);
         recycler.setHasFixedSize(true);
 
-        RecyclerView.LayoutManager layoutManager2 = new GridLayoutManager(this,2);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
 
-        recycler.setLayoutManager(layoutManager2);
+        recycler.setLayoutManager(layoutManager);
 
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
         String fecha = format.format(Calendar.getInstance().getTime());
