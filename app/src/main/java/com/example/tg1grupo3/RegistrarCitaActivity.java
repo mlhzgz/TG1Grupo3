@@ -52,7 +52,9 @@ public class RegistrarCitaActivity extends AppCompatActivity {
             alertas("Se debe de seleccionar un médico para la cita");
         } else{
             alertas("Has registrado la cita correctamente");
-            Cita objetoCita = new Cita(txtFechaCita.toString(),txtHoraCita.toString(),txtNombrePacienteCita.toString(),spnEspecialidadMedicaCita.getSelectedItem().toString(),spnMedicoCita.getSelectedItem().toString(),txtAnotacionesCita.toString());
+            Cita objetoCita = new Cita(txtFechaCita.getText().toString(),txtHoraCita.getText().toString(),
+                    txtNombrePacienteCita.getText().toString(),spnEspecialidadMedicaCita.getSelectedItem().toString(),
+                    spnMedicoCita.getSelectedItem().toString(),txtAnotacionesCita.getText().toString());
             ListaCitas.addCita(objetoCita);
             limpiarCampos();
         }
