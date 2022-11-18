@@ -7,21 +7,21 @@
 
     #Estructura de código
         #Actividades
-            Splash -> Ismael 0
+            Splash -> Ismael 2
 
-            Login -> Ismael 0
+            Login -> Ismael 2
             #Formulario?
                 Usuario -> EditText
                 Contraseña -> EditText
                 #controles
                     Btn Entrar
 
-            ListaCitasDia -> Victor 0
+            ListaCitasDia -> Victor 1
                 #Menu btn cambiar dia
                 #Menu btn registrar cita
                 #RecyclerView
 
-            RegistrarCita -> Álvaro 0
+            RegistrarCita -> Álvaro 2
                 #Formulario
                     Fecha
                     Hora
@@ -33,7 +33,7 @@
                           Btn Registrar
                           Btn Cancelar
 
-        #Adapters -> Raúl 0
+        #Adapters -> Raúl 1
             CitaAdapter
 
         #Lógica de negocio(describir las funcionalidades del codigo) - Raúl

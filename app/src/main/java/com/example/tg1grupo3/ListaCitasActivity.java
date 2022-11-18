@@ -42,6 +42,7 @@ public class ListaCitasActivity extends AppCompatActivity {
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
         String fecha = format.format(Calendar.getInstance().getTime());
         adapterLista(fecha);
+        txtFechaElegida.setText(fecha);
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
