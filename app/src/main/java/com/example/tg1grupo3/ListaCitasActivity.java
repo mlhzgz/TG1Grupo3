@@ -1,19 +1,13 @@
 package com.example.tg1grupo3;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,8 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.tg1grupo3.adapters.CitaAdapter;
 import com.example.tg1grupo3.datos.Cita;
 import com.example.tg1grupo3.logica.ListaCitas;
-import com.example.tg1grupo3.util.DatePickerFragment;
-import com.example.tg1grupo3.util.Utilidades;
+import com.example.tg1grupo3.util.UtilidadesCalendario;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -55,28 +48,14 @@ public class ListaCitasActivity extends AppCompatActivity {
         return  true;
     }
 
-    private void showDatePickerDialog() {
-        StringBuilder fechaBuilder = new StringBuilder();
-        DatePickerFragment.newInstance(
-                ((datePicker, year, mes, dia) -> {
-                    fechaBuilder.append(Utilidades.dosDigitos(dia))
-                            .append("/")
-                            .append(Utilidades.dosDigitos(mes + 1))
-                            .append("/")
-                            .append(year);
-                    fecha = fechaBuilder.toString();
-                })
-        ).show(getSupportFragmentManager(), "datePicker");
-    }
-
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId()==R.id.nuevaCita){
             abrirListaCitas();
         }else if(item.getItemId()==R.id.calendario){
-            showDatePickerDialog();
             txtFechaElegida= findViewById(R.id.txtFechaElegida);
-            txtFechaElegida.setText(fecha);
+            UtilidadesCalendario.showDatePickerDialog(this, txtFechaElegida);
+            fecha = txtFechaElegida.getText().toString();
             adapterLista(fecha);
         }
 

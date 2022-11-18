@@ -30,14 +30,12 @@ public class DatePickerFragment extends DialogFragment
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
-        final long YEAR_IN_MILIS = 31557600000L;
         final Calendar calendario = Calendar.getInstance();
-        int year = calendario.get(Calendar.YEAR) - 18;
+        int year = calendario.get(Calendar.YEAR);
         int mes = calendario.get(Calendar.MONTH);
         int dia = calendario.get(Calendar.DAY_OF_MONTH);
-
         DatePickerDialog dateDialog = new DatePickerDialog(getActivity(), listener, year, mes, dia);
-        dateDialog.getDatePicker().setMaxDate(System.currentTimeMillis() - 18 * YEAR_IN_MILIS);
+        dateDialog.getDatePicker().setMinDate(System.currentTimeMillis());
         return dateDialog;
     }
 
