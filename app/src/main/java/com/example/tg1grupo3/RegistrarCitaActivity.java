@@ -33,7 +33,7 @@ public class RegistrarCitaActivity extends AppCompatActivity {
 
     public void compruebaCampos(){
         EditText txtFechaCita = findViewById(R.id.txtFechaCita);
-        EditText txtHoraCita = findViewById(R.id.txtHoraCita);
+
         EditText txtNombrePacienteCita = findViewById(R.id.txtNombrePacienteCita);
         Spinner spnEspecialidadMedicaCita = findViewById(R.id.spnEspecialidadMedicaCita);
         Spinner spnMedicoCita = findViewById(R.id.spnMedicoCita);
@@ -42,8 +42,6 @@ public class RegistrarCitaActivity extends AppCompatActivity {
 
         if(compruebaTxtVacio(txtFechaCita)){
             alertas("El campo de la fecha no puede quedar vacío");
-        } else if(compruebaTxtVacio(txtHoraCita)){
-            alertas("El campo de lahora no puede quedar vacío");
         } else if(compruebaTxtVacio(txtFechaCita)){
             alertas("El campo del nombre del paciente no puede quedar vacío");
         } else if(compruebaSeleccionSpinner(spnEspecialidadMedicaCita)){
@@ -52,7 +50,11 @@ public class RegistrarCitaActivity extends AppCompatActivity {
             alertas("Se debe de seleccionar un médico para la cita");
         } else{
             alertas("Has registrado la cita correctamente");
-            Cita objetoCita = new Cita(txtFechaCita.getText().toString(),txtHoraCita.getText().toString(),
+            Spinner spnHorasCita = findViewById(R.id.spnHorasCita);
+            Spinner spnMinutosCitas = findViewById(R.id.spnMinutosCitas);
+            String horaCitas = spnHorasCita.getSelectedItem().toString()+ ":" +spnMinutosCitas.getSelectedItem().toString();
+
+            Cita objetoCita = new Cita(txtFechaCita.getText().toString(),horaCitas,
                     txtNombrePacienteCita.getText().toString(),spnEspecialidadMedicaCita.getSelectedItem().toString(),
                     spnMedicoCita.getSelectedItem().toString(),txtAnotacionesCita.getText().toString());
             ListaCitas.addCita(objetoCita);
@@ -81,13 +83,15 @@ public class RegistrarCitaActivity extends AppCompatActivity {
     }
     public void limpiarCampos(){
         EditText txtFechaCita = findViewById(R.id.txtFechaCita);
-        EditText txtHoraCita = findViewById(R.id.txtHoraCita);
+        Spinner spnHorasCita = findViewById(R.id.spnHorasCita);
+        Spinner spnMinutosCitas = findViewById(R.id.spnMinutosCitas);
         EditText txtNombrePacienteCita = findViewById(R.id.txtNombrePacienteCita);
         Spinner spnEspecialidadMedicaCita = findViewById(R.id.spnEspecialidadMedicaCita);
         Spinner spnMedicoCita = findViewById(R.id.spnMedicoCita);
         EditText txtAnotacionesCita = findViewById(R.id.txtAnotacionesCita);
         txtFechaCita.setText("");
-        txtHoraCita.setText("");
+        spnHorasCita.setSelection(0);
+        spnMinutosCitas.setSelection(0);
         txtNombrePacienteCita.setText("");
         spnEspecialidadMedicaCita.setSelection(0);
         spnMedicoCita.setSelection(0);
