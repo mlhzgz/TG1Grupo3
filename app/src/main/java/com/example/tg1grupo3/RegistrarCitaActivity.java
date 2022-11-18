@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.example.tg1grupo3.datos.Cita;
+import com.example.tg1grupo3.logica.ListaCitas;
+import com.example.tg1grupo3.util.UtilidadesCalendario;
 
 public class RegistrarCitaActivity extends AppCompatActivity {
 
@@ -23,6 +25,9 @@ public class RegistrarCitaActivity extends AppCompatActivity {
         });
         EditText txtFechaCita = findViewById(R.id.txtFechaCita);
 
+        txtFechaCita.setOnClickListener(v->{
+            UtilidadesCalendario.showDatePickerDialog(this, txtFechaCita);
+        });
 
     }
 
@@ -47,7 +52,8 @@ public class RegistrarCitaActivity extends AppCompatActivity {
             alertas("Se debe de seleccionar un médico para la cita");
         } else{
             alertas("Has registrado la cita correctamente");
-            //Cita objetoCita = new Cita(txtFechaCita.toString(),txtHoraCita.toString(),txtNombrePacienteCita.toString(),spnEspecialidadMedicaCita.getSelectedItem().toString(),spnMedicoCita.getSelectedItem().toString(),txtAnotacionesCita.toString());
+            Cita objetoCita = new Cita(txtFechaCita.toString(),txtHoraCita.toString(),txtNombrePacienteCita.toString(),spnEspecialidadMedicaCita.getSelectedItem().toString(),spnMedicoCita.getSelectedItem().toString(),txtAnotacionesCita.toString());
+            ListaCitas.addCita(objetoCita);
             limpiarCampos();
         }
 
