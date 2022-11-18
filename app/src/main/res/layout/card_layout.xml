@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/txtNombre"
     android:layout_width="match_parent"
-    android:layout_height="15dp"
-    app:cardBackgroundColor="#6163A4D8"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#6109E8D5"
     app:contentPadding="5dp">
 
     <LinearLayout
@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:text="TextView"
+            android:textAlignment="center"
             tools:text="aaa" />
 
         <Space
@@ -33,6 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:text="TextView"
+            android:textAlignment="center"
             tools:text="aa" />
 
         <Space
@@ -44,6 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:text="TextView"
+            android:textAlignment="center"
             tools:text="aa" />
 
         <Space
@@ -55,6 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:text="TextView"
+            android:textAlignment="center"
             tools:text="aa" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
