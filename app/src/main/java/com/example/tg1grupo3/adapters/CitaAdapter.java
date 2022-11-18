@@ -25,7 +25,6 @@ public class CitaAdapter extends RecyclerView.Adapter<CitaAdapter.ViewHolder>{
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //TODO: seleccionar el layout para guardar la vista
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.card_layout, parent, false);
 
@@ -61,8 +60,6 @@ public class CitaAdapter extends RecyclerView.Adapter<CitaAdapter.ViewHolder>{
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            //TODO: añadir los campos desde la vista
             nombrePaciente = itemView.findViewById(R.id.txtNombrePaciente);
             nombreMedico = itemView.findViewById(R.id.txtNombreDoctor);
             dia = itemView.findViewById(R.id.txtFecha);
