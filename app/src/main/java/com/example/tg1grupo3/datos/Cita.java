@@ -44,13 +44,12 @@ public class Cita {
 
     @Override
     public String toString() {
-        return "Cita{" +
-                "fecha: " + fecha +
-                "\n hora: " + hora +
-                "\n nombreDelPaciente: " + nombreDelPaciente +
-                "\n especialidad: " + especialidad +
-                "\n nombreMedico: " + nombreMedico +
-                "\n anotaciones: " + anotaciones +
-                '}';
+        return
+                "Nombre del paciente: " + nombreDelPaciente +
+                "\nEspecialidad: " + especialidad +
+                "\nNombre del médico: " + nombreMedico +
+                "\nFecha: " + fecha +
+                "\nHora: " + hora +
+                "\nAnotaciones: " + anotaciones;
     }
 }
