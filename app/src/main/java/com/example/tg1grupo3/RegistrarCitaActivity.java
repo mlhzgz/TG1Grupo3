@@ -51,7 +51,7 @@ public class RegistrarCitaActivity extends AppCompatActivity {
     public void compruebaCampos(){
         if(compruebaTxtVacio(txtFechaCita)){
             alertas("El campo de la fecha no puede quedar vacío");
-        } else if(compruebaTxtVacio(txtFechaCita)){
+        } else if(compruebaTxtVacio(txtNombrePacienteCita)){
             alertas("El campo del nombre del paciente no puede quedar vacío");
         } else if(compruebaSeleccionSpinner(spnEspecialidadMedicaCita)){
             alertas("Se debe de seleccionar una especialiad");

@@ -5,11 +5,11 @@
     <item
         android:id="@+id/calendario"
         android:icon="@drawable/calendario"
-        android:title="calendario"
+        android:title="Calendario"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/nuevaCita"
         android:icon="@drawable/registro"
-        android:title="Nueva Cita"
+        android:title="Nueva cita"
         app:showAsAction="ifRoom" />
 </menu>

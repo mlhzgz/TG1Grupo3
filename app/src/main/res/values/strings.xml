@@ -5,30 +5,32 @@
 
     <string-array name="especialidades">
         <item>Seleccione especialidad</item>
-        <item>Urólogo</item>
-        <item>Pediatra</item>
+        <item>Endocrinología</item>
+        <item>Gineccología</item>
+        <item>Neurología</item>
+        <item>Oftalmología</item>
+        <item>Otorrinolaringología</item>
+        <item>Pediatría</item>
+        <item>Podología</item>
         <item>Psiquiatría</item>
-        <item>Oftalmólogo</item>
-        <item>Ginecólogo</item>
-        <item>Podólogo</item>
-        <item>Otorrinolaringólogo</item>
-        <item>Radiólogo</item>
-        <item>Neurólogo</item>
-        <item>Endocrino</item>
+        <item>Radiología</item>
+        <item>Urología</item>
+
+
 </string-array>
 
 <string-array name="medicos">
     <item>Seleccione médico</item>
-    <item>Dr. Vilches</item>
-    <item>Dr. Shawn Murphy</item>
     <item>Dr. Derek shepherd</item>
+    <item>Dra. Eggman</item>
+    <item>Dr. Gregory House</item>
+    <item>Dr. Julius Hibbert</item>
     <item>Dr. Max Goodwin</item>
     <item>Dra. Meredith Grey</item>
-    <item>Dra. Eggman</item>
-    <item>Dra. Sara Tancredi</item>
-    <item>Dr. Julius Hibbert</item>
     <item>Dr. Nick Riviera</item>
-    <item>Dr. Gregory House</item>
+    <item>Dr. Shawn Murphy</item>
+    <item>Dra. Sara Tancredi</item>
+    <item>Dr. Vilches</item>
 </string-array>
 
     <string-array name="horas">
