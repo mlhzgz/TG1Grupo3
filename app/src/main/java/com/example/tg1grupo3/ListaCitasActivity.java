@@ -2,6 +2,8 @@ package com.example.tg1grupo3;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -9,7 +11,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,7 +25,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class ListaCitasActivity extends AppCompatActivity {
-    String fecha;
     TextView txtFechaElegida;
     RecyclerView recycler;
     @Override
@@ -41,8 +41,10 @@ public class ListaCitasActivity extends AppCompatActivity {
 
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
         String fecha = format.format(Calendar.getInstance().getTime());
-        adapterLista(fecha);
+
         txtFechaElegida.setText(fecha);
+
+        txtFechaElegida.addTextChangedListener(new OnTextChange());
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -57,8 +59,6 @@ public class ListaCitasActivity extends AppCompatActivity {
         }else if(item.getItemId()==R.id.calendario){
             txtFechaElegida= findViewById(R.id.txtFechaElegida);
             UtilidadesCalendario.showDatePickerDialog(this, txtFechaElegida);
-            fecha = txtFechaElegida.getText().toString();
-            adapterLista(fecha);
         }
 
         return super.onOptionsItemSelected(item);
@@ -75,5 +75,19 @@ public class ListaCitasActivity extends AppCompatActivity {
         startActivity(intento);
     }
 
+    class OnTextChange implements TextWatcher{
+
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            adapterLista(String.valueOf(charSequence));
+        }
+
+        @Override
+
+        public void afterTextChanged(Editable editable) {}
+    }
 
 }
