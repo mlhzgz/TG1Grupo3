@@ -3,7 +3,11 @@
     Jefe de Equipo: Victor Viñerta
 
     #Estructura de datos
-        Cita -> Ismael 0
+        Cita -> Ismael 2
+        Array de de datos para cargar en spinner->ArrayString especialidades
+                                                ->ArrayString medicos
+                                                ->ArrayString horas
+                                                ->ArrayString minutos
 
     #Estructura de código
         #Actividades
@@ -16,15 +20,23 @@
                 #controles
                     Btn Entrar
 
-            ListaCitasDia -> Victor 1
+            ListaCitasDia -> Victor 2
                 #Menu btn cambiar dia
                 #Menu btn registrar cita
                 #RecyclerView
 
+            Card_layout ->Victor 2
+                #cardview
+                    Nombre Paciente ->TextView
+                    Nombre doctor ->TextView
+                    Fecha ->TextView
+                    Hora ->TextView
+
             RegistrarCita -> Álvaro 2
                 #Formulario
-                    Fecha
-                    Hora
+                    Fecha ->EditText
+                    Hora  ->spinner
+                    Minutos ->spinner
                     Nombre paciente -> EditText
                     Especialidad medica (10) -> Spinner
                     Medico (10) -> Spinner
@@ -33,10 +45,10 @@
                           Btn Registrar
                           Btn Cancelar
 
-        #Adapters -> Raúl 1
+        #Adapters -> Raúl 2
             CitaAdapter
 
-        #Lógica de negocio(describir las funcionalidades del codigo) - Raúl
+        #Lógica de negocio(describir las funcionalidades del codigo) - Raúl 2
             ListaCitas
                 filtrarDias
 
