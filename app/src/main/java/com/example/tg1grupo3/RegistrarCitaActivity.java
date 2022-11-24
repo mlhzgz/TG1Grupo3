@@ -79,11 +79,7 @@ public class RegistrarCitaActivity extends AppCompatActivity {
     public void alertas(String texto){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(texto);
-        builder.setNegativeButton("Cerrar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-            }
-        });
+        builder.setNegativeButton("Cerrar", null);
         builder.show();
     }
     public void limpiarCampos(){

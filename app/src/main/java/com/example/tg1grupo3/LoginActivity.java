@@ -23,9 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
         nombre.setHint("Usuario");
         contrasena.setHint("Contraseña");
-
-
-
+        
         entrar.setOnClickListener(v ->{
             if(ComprobarVacio(nombre)){nombre.setError("Debe introducir un usuario");}else if(ComprobarVacio(contrasena)){contrasena.setError("Debe introducir una contraseña");}else {
                 Intent intent = new Intent(getApplicationContext(), ListaCitasActivity.class);
